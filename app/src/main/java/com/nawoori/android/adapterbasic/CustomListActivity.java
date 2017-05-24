@@ -35,6 +35,9 @@ public class CustomListActivity extends AppCompatActivity {
     }
 }
 
+//역할 : Presenter
+//M(데이터를 가져오고) -> C (가공을 하고) -> V (화면에 뿌려준다)
+
 class CustomAdapter extends BaseAdapter {
     ArrayList<Data> datas;
     Context context;
@@ -51,12 +54,12 @@ class CustomAdapter extends BaseAdapter {
         return datas.size();
     }
 
-    @Override
+    @Override//데이터 클래서 하나를 이턴
     public Object getItem(int position) { //데이터 클레스 하나를 리턴
         return datas.get(position);
     }
 
-    @Override
+    @Override//아이템뷰 하나를 리턴한다
     public long getItemId(int position) { // 뷰의 아이디 값이 리턴, 대부분 인덱스가 그대로 리턴
         return position;
     }
